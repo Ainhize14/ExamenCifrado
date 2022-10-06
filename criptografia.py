@@ -17,7 +17,6 @@ textoDescifrado = texto
 letrasOrdPorFreq = ['e','a','o','l','s','n','d','r','u','i','t','c','p','m','y','q','b','h','g','f','V','j','ñ','z','x','k','w']
 cont=0
 
-#en la lista de las letras ordenadas por las frecuencias en castellano la V es mayúscula porque en el texto hay una v minúscula que YA ESTÁ DESCIFRADA
 
 for par in lista_ord:
 	#print(par[0])
@@ -26,13 +25,11 @@ for par in lista_ord:
 	
 print(textoDescifrado)
 print(" ")
-#Ahora vamos viendo el texto descifrado y vamos cambiando letras y probando
-#NO ES UN VOID, HAY QUE ASIGNARLO A textoDescifrado
-#hay letras que ya estarán bien puestas según el análisis de frecuencias (no hay que reemplazar todas)
-#NO HAY QUE CAMBIAR NADA POR v PORQUE ESA YA ESTA PUESTA
-textoDescifrado=textoDescifrado.replace('d','l'.upper()); #luego tendré que poner d
+
+#AJUSTES
+textoDescifrado=textoDescifrado.replace('d','l'.upper()); 
 textoDescifrado=textoDescifrado.replace('o','r'.upper());
-textoDescifrado=textoDescifrado.replace('r','d'.upper()); #pongo la d, que antes la he quitado
+textoDescifrado=textoDescifrado.replace('r','d'.upper()); 
 textoDescifrado=textoDescifrado.replace('p','m'.upper());
 textoDescifrado=textoDescifrado.replace('l','o'.upper());
 textoDescifrado=textoDescifrado.replace('h','j'.upper());
@@ -48,7 +45,6 @@ textoDescifrado=textoDescifrado.replace('m','p'.upper());
 textoDescifrado=textoDescifrado.replace('g','y'.upper());
 textoDescifrado=textoDescifrado.replace('f','g'.upper());
 textoDescifrado=textoDescifrado.replace('j','x'.upper());
-textoDescifrado=textoDescifrado.replace('V','h'.upper()); #la 'v' que estaba ya descifrada en el texto codificado se mantendrá como 'v', las otras que se han puesto tras hacer el análisis de frecuencias no, porque son 'V'
-#print(textoDescifrado) #comentar esta línea al acabar de descifrar todo el texto
-print(textoDescifrado.upper()) #comentar esta línea durante el descifrado y descomentarla al acabar de descifrar todo el texto, para que salga todo en mayúscula
-
+textoDescifrado=textoDescifrado.replace('V','h'.upper()); 
+#print(textoDescifrado)
+print(textoDescifrado.upper())
